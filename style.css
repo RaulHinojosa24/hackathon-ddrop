@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: rgb(19, 15, 38);
+  --accent-color: rgb(93, 156, 84);
+  --font-family: "Montserrat", sans-serif;
+  --font-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+.left-side {
+  width: 60%;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.left-side .drop-zone {
+  width: 100%;
+  height: 60%;
+}
+
+.files {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.file-item {
+  max-width: 100px;
+}
+
+.file-item .file-item-image {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.file-item .file-item-name {
+  text-align: center;
+  word-break: break-word;
+}
+
+.drop-zone {
+  position: relative;
+  box-shadow: 0 0 40px 10px var(--accent-color);
+  border-radius: 5px;
+}
+
+.drop-zone .message {
+  width: fit-content;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-side .upload-file {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--accent-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.right-side {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+.introduction h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.introduction p {
+  word-spacing: 5px;
+  line-height: 1.5rem;
+}
+
+.right-side hr {
+  width: 100%;
+}
+
+.right-side .google-button {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
+  font-weight: 400;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border-color: var(--font-color);
+  position: relative;
+}
+
+.google-button i {
+  position: absolute;
+  font-size: 1.9rem;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-side .upload-file:disabled,
+.left-side .upload-file[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: no-drop;
+}
+
+button:hover {
+  cursor: pointer;
+}

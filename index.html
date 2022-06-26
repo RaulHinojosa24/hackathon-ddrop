@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackathon DDrop</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/1243d5906a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="left-side">
+      <!-- <input type="file" name="files" id="files-input" multiple="" hidden /> -->
+      <div class="drop-zone" id="drop-zone">
+        <div class="files"></div>
+        <div class="message">Arrastra tus archivos aquí</div>
+      </div>
+      <button class="upload-file" id="uploadFiles" disabled>
+        Subir archivos a Google Drive!
+      </button>
+    </div>
+
+    <div class="right-side">
+      <div class="introduction">
+        <h1>Bienvenido a DDrop</h1>
+        <p>
+          Para subir tus archivos de forma simple a drive, puedes hacer Login a
+          través de Google.
+        </p>
+      </div>
+      <hr />
+      <button class="google-button" id="login">
+        <i class="fa-brands fa-google"></i> Login con Google
+      </button>
+    </div>
+
+    <script async defer src="config.js"></script>
+    <script async defer src="script.js"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
+  </body>
+</html>
