@@ -89,7 +89,6 @@ function handleAuthClick() {
     if (resp.error !== undefined) {
       throw resp;
     }
-    console.log(resp);
 
     loginButton.removeEventListener("click", handleAuthClick);
     loginButton.textContent = "Cerrar sesión Google";
@@ -142,9 +141,7 @@ function uploadFiles() {
           }),
           body: form,
         }
-      )
-        .then((res) => res.json())
-        .then((res) => console.log(res));
+      ).then((res) => res.json());
     };
   });
 }
