@@ -6,8 +6,9 @@ const uploadFilesButton = document.getElementById("uploadFiles");
 const loginButton = document.getElementById("login");
 loginButton.style.visibility = "hidden";
 
-const CLIENT_ID = config.CLIENT_ID;
-const API_KEY = config.API_KEY;
+const CLIENT_ID =
+  "510172276616-10ocqra9qehuiqf1f8158h6a1m1m1j6j.apps.googleusercontent.com";
+const API_KEY = "AIzaSyCLsfbItmklumfCwl7zfRlu_ykzxb9jAxM";
 
 const DISCOVERY_DOC =
   "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest";
